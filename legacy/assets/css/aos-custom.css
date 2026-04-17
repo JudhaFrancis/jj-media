@@ -1,0 +1,79 @@
+/* Custom AOS Blur Animations */
+
+/* Blur Up */
+[data-aos="blur-up"] {
+  transform: translateY(30px);
+  opacity: 0;
+  filter: blur(10px);
+  transition-property: transform, opacity, filter;
+}
+
+[data-aos="blur-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Blur Down */
+[data-aos="blur-down"] {
+  transform: translateY(-30px);
+  opacity: 0;
+  filter: blur(10px);
+  transition-property: transform, opacity, filter;
+}
+
+[data-aos="blur-down"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Blur In */
+[data-aos="blur-in"] {
+  opacity: 0;
+  filter: blur(10px);
+  transition-property: opacity, filter;
+}
+
+[data-aos="blur-in"].aos-animate {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Mobile Menu Visibility & Animation */
+.th-menu-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  /* Start with no blur */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  /* Smooth transition for all properties including blur */
+  transition:
+    opacity 0.8s ease-in-out,
+    visibility 0.8s ease-in-out,
+    backdrop-filter 0.8s ease-in-out,
+    -webkit-backdrop-filter 0.8s ease-in-out;
+
+  z-index: 99999;
+}
+
+.th-menu-wrapper.th-body-visible {
+  opacity: 1;
+  visibility: visible;
+  /* Add blur effect to the background */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Ensure the side menu slides in when wrapper is visible */
+.th-menu-wrapper.th-body-visible .th-menu-area {
+  transform: translateX(0) !important;
+}
+
+.th-menu-area {
+  transform: translateX(-100%);
+  /* Slower 1.0s duration with a smooth ease-out curve for both open and close */
+  transition: transform 1.0s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}

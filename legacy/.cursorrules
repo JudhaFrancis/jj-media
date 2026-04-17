@@ -1,0 +1,21 @@
+# JJ Media - Project Context & Rules
+
+## Project Stack
+- PHP (Backend)
+- Tailwind CSS (Frontend)
+- PHPMailer (MMS/Email)
+
+## File Structure
+- `pages/`: Core page templates.
+- `include/`: Reusable components.
+- `src/`: Tailwind source.
+- `dist/`: Build output.
+
+## Code Standards
+- Use Tailwind utility classes directly in PHP templates.
+- Ensure responsive design (mobile-first).
+- Handle form submissions via `submit_form.php` using PHPMailer.
+
+## Commands
+- Dev: `npm run dev`
+- Build: `npm run build`

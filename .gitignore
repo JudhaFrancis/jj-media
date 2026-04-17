@@ -1,0 +1,47 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+vendor/
+
+# Testing
+coverage/
+
+# Next.js
+.next/
+out/
+build/
+
+# Legacy project artifacts
+.ovi-knowns/
+
+# Misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment files
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# IDEs and Tools
+.vscode/
+.idea/
+.project
+.classpath
+.settings/
+*.swp
+*.swo

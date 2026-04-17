@@ -1,0 +1,60 @@
+<html>
+
+  <head>
+    <style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ring {
+  fill: none;
+  stroke-dasharray: 720 180;
+  stroke-linecap: round;
+  stroke: #231f20;
+  stroke-width: 40px;
+  animation: progress 3s linear normal infinite;
+}
+.left {
+  transform: translate(100px, 0) rotate(90deg);
+}
+.right {
+  transform: translate(100px, 200px) rotate(-90deg);
+  animation-delay: 1.5s;
+  animation-direction: reverse;
+}
+
+@keyframes progress {
+  0%,
+  10% {
+    stroke-dashoffset: 100;
+  }
+  90%,
+  100% {
+    stroke-dashoffset: -900;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    
+    <div id="loader" style="font-size: 200px;color:  #231f20;"> 
+     <span>A</span><span style="color: #6ebe45;margin-right: -45px;">g</span>
+      <svg height="80" width="160" viewBox="-20 -20 240 240">
+        <path class="ring left" d="M100,0 a100,100 0 0 1 0,200 a100,100 0 0 1 0,-200,0" fill="none" />
+        <path class="ring right" d="M100,0 a100,100 0 0 1 0,200 a100,100 0 0 1 0,-200,0" />
+      </svg>
+    </div>
+  </body>
+ 
+
+
+</html>
